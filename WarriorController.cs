@@ -141,7 +141,6 @@ public class WarriorController : MonoBehaviour
     void OnGUI()
     {
         // Definimos un área en la parte DERECHA de la pantalla
-        // Ancho de 350px, pegado al borde derecho
         float width = 350f;
         float padding = 20f;
         GUILayout.BeginArea(new Rect(Screen.width - width - padding, padding, width, Screen.height - padding));
@@ -159,7 +158,7 @@ public class WarriorController : MonoBehaviour
             GUILayout.Label($"Lon: {lastValidLon}", textStyle);
         }
         
-        // BOTÓN DE EMERGENCIA (Más pequeño)
+        // BOTÓN DE EMERGENCIA
         GUIStyle btnStyle = new GUIStyle("button");
         btnStyle.fontSize = 25; // Reducido de 50 a 25
         
@@ -173,3 +172,4 @@ public class WarriorController : MonoBehaviour
     }
 
 }
+
