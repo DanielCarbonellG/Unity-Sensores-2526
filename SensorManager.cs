@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 using TMPro;
 using UnityEngine.InputSystem.Controls;
 
-// Resolvemos conflicto de nombres (Usamos el Nuevo Input System)
+// Resolver conflicto de nombres
 using Gyroscope = UnityEngine.InputSystem.Gyroscope;
 using Accelerometer = UnityEngine.InputSystem.Accelerometer;
 
@@ -22,7 +22,7 @@ public class SensorManager : MonoBehaviour
     void Update()
     {
         // INTENTO DE ACTIVACIÓN CONSTANTE
-        // Vigilamos constantemente si Unity Remote conecta los sensores.
+        // Vigilar constantemente si Unity Remote conecta los sensores.
         CheckAndEnable(Accelerometer.current);
         CheckAndEnable(Gyroscope.current);
         CheckAndEnable(GravitySensor.current);
@@ -105,4 +105,5 @@ public class SensorManager : MonoBehaviour
         if (AttitudeSensor.current != null) InputSystem.DisableDevice(AttitudeSensor.current);
         if (MagneticFieldSensor.current != null) InputSystem.DisableDevice(MagneticFieldSensor.current);
     }
+
 }
