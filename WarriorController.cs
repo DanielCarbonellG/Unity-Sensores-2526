@@ -5,12 +5,6 @@ using System.Collections;
 using Gyroscope = UnityEngine.InputSystem.Gyroscope;
 using Accelerometer = UnityEngine.InputSystem.Accelerometer;
 
-/*
- * VERSIÓN DEFINITIVA ANTI-ERRORES (UI DERECHA)
- * 1. Protege OnGUI para que no falle si el GPS se desconecta.
- * 2. UI movida a la derecha y reducida para no tapar la visión.
- */
-
 public class WarriorController : MonoBehaviour
 {
     [Header("Límites GPS (Tenerife)")]
@@ -177,4 +171,5 @@ public class WarriorController : MonoBehaviour
 
         GUILayout.EndArea(); // Cerramos el área derecha
     }
+
 }
